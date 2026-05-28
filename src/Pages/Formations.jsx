@@ -87,8 +87,76 @@ const formationsData = [
   }
 ];
 
+
+
 function Formations() {
 
-  return (<h1>Formations Page</h1>)
+  function handleCardClick(index) {
+    const formation = formationsData[index];
+
+    document.querySelector('#expanded-title').innerText = formation.title;
+    document.querySelector('#expanded-img').src = formation.image;
+    document.querySelector('#expanded-img').alt = formation.title;
+
+    const prosList = document.querySelector('#expanded-pros');
+    prosList.innerHTML = '';
+    formation.pros.forEach(pro => {
+      const li = document.createElement('li');
+      li.innerText = pro;
+      prosList.appendChild(li);
+    });
+
+    const consList = document.querySelector('#expanded-cons');
+    consList.innerHTML = '';
+    formation.cons.forEach(con => {
+      const li = document.createElement('li');
+      li.innerText = con;
+      consList.appendChild(li);
+    });
+
+    document.querySelector('#master-grid-container').style.display = 'none';
+    document.querySelector('#expanded-view-container').style.display = 'block';
+  }
+
+  function handleBackClick() {
+    document.querySelector('#expanded-view-container').style.display = 'none';
+    document.querySelector('#master-grid-container').style.display = 'block';
+  }
+
+  return (
+    <main className="formations-wrapper">
+      
+
+      <div id="master-grid-container">
+        <h2 className="click-to-expand-title">Click to Expand</h2>
+        
+        <section className="cards">
+          {formationsData.map((formation, index) => (
+            <div className="card" key={index} onClick={() => handleCardClick(index)} style={{ cursor: 'pointer' }}>
+              <h3>{formation.title}</h3>
+              <img src={formation.image}/>
+            </div>
+          ))}
+        </section>
+      </div>
+
+
+      <div id="expanded-view-container" style={{ display: 'none' }}>
+        <button type="button" className="back-btn" onClick={handleBackClick}>Back</button>
+        
+        <div className="expanded-card-layout">
+          <h2 id="expanded-title">Formation Title</h2>
+          <img id="expanded-img" src="" alt="" />
+
+          <p className="pros">Pros :</p>
+          <ul id="expanded-pros"></ul>
+
+          <p className="cons">Cons :</p>
+          <ul id="expanded-cons"></ul>
+        </div>
+      </div>
+
+    </main>
+  );
 }
 export default Formations;
