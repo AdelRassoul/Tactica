@@ -11,6 +11,7 @@ import img451 from '../Assets/imgs/4-5-1.png';
 import img442D from '../Assets/imgs/4-4-2_Diamond.png';
 import img3421 from '../Assets/imgs/3-4-2-1.png';
 
+import '../Styles/Formations.css';
 
 const formationsData = [
   {
