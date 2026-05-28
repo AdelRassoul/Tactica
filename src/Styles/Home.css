@@ -1,0 +1,127 @@
+.hero {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Assets/imgs/hero.png'); 
+    background-size: 80% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #01050a;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #00ff87;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0, 255, 135, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #00ff87;
+    color: #0a0f2c;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.hero a:hover {
+    background-color: #ffffff;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    margin-bottom: 100px;
+}
+
+.card {
+    background-color: #0d1530;
+    border: 1px solid #00ff87;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 135, 0.2);
+    z-index: 1;
+}
+
+.card h3 {
+    color: #00ff87;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card h6 { 
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.card a {
+    text-decoration: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+        background-size: 100% 100%;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 13px;
+    }
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 22px;
+    }
+    .hero {
+        height: 250px;
+    }
+    .card {
+        width: 100%;
+    }
+}

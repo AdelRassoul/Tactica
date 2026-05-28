@@ -3,6 +3,8 @@ import formationsCardImg from '../Assets/imgs/formations-card.png';
 import tacticsCardImg from '../Assets/imgs/tactics-card.png';
 import lineupCardImg from '../Assets/imgs/lineup-card.png';
 
+import '../Styles/Home.css';
+
 function Home() {
  return (
     <>
