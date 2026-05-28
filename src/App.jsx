@@ -8,6 +8,8 @@ import Formations from './Pages/Formations';
 import LineBuilder from './Pages/LineBuilder';
 import Contact from './Pages/Contact';
 
+import './Styles/Global.css';
+
 function App() {
   return (
     <Router>
