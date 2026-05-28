@@ -3,7 +3,10 @@ import {BrowserRouter as Router , Routes , Route }
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
-
+import Guide from './Pages/Guide';
+import Formations from './Pages/Formations';
+import LineBuilder from './Pages/LineBuilder';
+import Contact from './Pages/Contact';
 
 function App() {
   return (
