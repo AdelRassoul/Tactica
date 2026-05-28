@@ -1,10 +1,13 @@
 import {BrowserRouter as Router , Routes , Route } 
           from 'react-router-dom'; 
-
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <Router>
+
+      <Navbar />
 
       <Routes>
         <Route path="/" exact Component={Home}></Route>
@@ -14,6 +17,7 @@ function App() {
         <Route path="/contact" exact Component={Contact}></Route>
       </Routes>
 
+      <Footer />
 
     </Router>
   );
