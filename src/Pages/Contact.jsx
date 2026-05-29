@@ -1,3 +1,5 @@
+import "../Styles/Contact.css"
+
 function Contact() {
   
 
@@ -50,8 +52,8 @@ function Contact() {
 
 
        <div className="messages-section">
-
-
+          <h2>Submitted Messages</h2>
+          <p className="db-warning">No database connected. Messages will be lost on page refresh or change .</p>
        <div id="submitted-messages-holder"></div>
        </div>
 
