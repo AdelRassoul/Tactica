@@ -1,0 +1,116 @@
+.workspace-container {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #0a0f2c;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+main h1 {
+    font-size: 36px;
+    color: #00ff87;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 255, 135, 0.3);
+}
+
+.phase-note {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.formation-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.formation-selector label {
+    padding: 8px 16px;
+    border: 1px solid #00ff87;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.formation-selector label:hover {
+    background-color: #00ff87;
+    color: #0a0f2c;
+    font-weight: bold;
+}
+
+.pitch {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    background-image: url('../Assets/imgs/pitch.png');
+    background-size: 100% 100%;
+    background-position: top center;
+    margin: 20px auto;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.player {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    background-color: rgba(0, 10, 50, 0.9);
+    border: 2px solid #00ff87;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%); 
+    cursor: pointer;
+    transition: left 0.5s ease-in-out, top 0.5s ease-in-out; 
+}
+
+.player .num {
+    font-size: 13px;
+    font-weight: bold;
+    color: #00ff87;
+    line-height: 1.1;
+}
+
+.player .pos {
+    font-size: 9px;
+    color: #ffffff;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .pitch {
+        width: 90%;
+        height: 590px;
+    }
+    .formation-selector label {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .player {
+        width: 38px;
+        height: 38px;
+    }
+    .player .num {
+        font-size: 11px;
+    }
+    .player .pos {
+        font-size: 7px;
+    }
+}
