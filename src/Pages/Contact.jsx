@@ -1,11 +1,39 @@
 function Contact() {
   
+
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const nameVal = document.getElementById('name').value;
+    const emailVal = document.getElementById('email').value;
+    const msgVal = document.getElementById('message').value;
+
+    const holder = document.getElementById('submitted-messages-holder');
+
+    if (holder) {
+      const card = document.createElement('div');
+      card.className = 'message-card';
+      const heading = document.createElement('h3');
+      heading.innerText = `From: ${nameVal} <${emailVal}>`;
+      const textBlock = document.createElement('p');
+      textBlock.innerText = msgVal;
+
+      card.append(heading, textBlock);
+
+      holder.append(card);
+    }
+
+    event.target.reset();
+  }
+
+
   return (
     <main>
       <div className="contact-container">
         <h1>Contact Us</h1>
         
-        <form action="">
+        <form action="" onSubmit={handleFormSubmit}>
           
           <label htmlFor="name">Name</label>
           <input type="text" id="name" required />
@@ -19,6 +47,13 @@ function Contact() {
           <button type="submit">Send Message</button>
 
         </form>
+
+
+       <div className="messages-section">
+
+
+       <div id="submitted-messages-holder"></div>
+       </div>
 
       </div>
     </main>
