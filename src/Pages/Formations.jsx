@@ -135,7 +135,7 @@ function Formations() {
           {formationsData.map((formation, index) => (
             <div className="card" key={index} onClick={() => handleCardClick(index)} style={{ cursor: 'pointer' }}>
               <h3>{formation.title}</h3>
-              <img src={formation.image}/>
+              <img src={formation.image} alt={formation.title} />
             </div>
           ))}
         </section>
