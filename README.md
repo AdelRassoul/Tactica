@@ -69,7 +69,7 @@ The app should open automatically in your browser at http://localhost:3000.
 
 
 ### Formations Expanded 
-![Formations Expanded](./formations_expanded.png)
+![Formations Expanded](./public/formations_expanded.png)
 
 
 ### Tactical Guide 
